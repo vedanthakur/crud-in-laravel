@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('school_name');
             $table->integer('class');
-            $table->string('student_name');
+            $table->string('student_name');     
             $table->integer('roll_no');
             $table->timestamps();
         });

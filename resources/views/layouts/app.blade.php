@@ -16,10 +16,16 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="add_student">Add Student</a>
+              <a class="nav-link" href="/add_student">Add Student</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="students">Students List</a>
+              <a class="nav-link" href="/students">Students List</a>
+            </li>
+            <li class="nav-item">
+              <a href="/add_profile" class="nav-link">Add Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="/profiles" class="nav-link">Profile List</a>
             </li>
           </ul>
         </div>
