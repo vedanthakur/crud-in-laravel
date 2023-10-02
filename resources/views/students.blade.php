@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-  Edit Student
+  Students
 @endsection
 
 @section('content')
@@ -25,15 +25,16 @@
                 <p class="text-align-center font-size-16">Roll no.: {{ $student->roll_no }}</p>
                 <p class="text-align-center font-size-16">Class: {{ $student->class }}</p>
                 <p class="text-align-center font-size-16">School: {{ $student->school_name }}</p>
-                <div>
-                <a href="{{ route('edit_student', $student->id) }}" class="btn btn-primary">Edit</a>
-                <form action="{{ route('students.destroy', $student->id) }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">
-                    <i class="bi bi-trash"></i> Delete
-                    </button>
-                </form>
+                <div class="d-flex justify-content-between">
+                    <a href="{{ route('edit_student', $student->id) }}" class="btn btn-primary w-50 mr-2">Edit</a>
+                  
+                    <form action="{{ route('students.destroy', $student->id) }}" method="post" class="flex-shrink-0 w-50 ml-2">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-danger w-100">
+                        <i class="bi bi-trash"></i> Delete
+                      </button>
+                    </form>
                 </div>
             </div>
         </div>
