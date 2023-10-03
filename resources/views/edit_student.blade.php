@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Edit Student</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-    @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
   <div class="container">
@@ -50,5 +43,3 @@
     </div>
   </div>
   @endsection
-</body>
-</html>

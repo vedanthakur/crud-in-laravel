@@ -7,11 +7,16 @@
 @section('content')
     <div class="col-md-12">
         <h1>Add Profile</h1>
+        @if(session('status'))
+            <div class="alert slert-success">
+                {{ session('status')}}
+            </div>
+        @endif
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="card card-body">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="{{ url('store-formP') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="form-group">
@@ -87,12 +92,6 @@
                         </div>
                         @enderror
                     </div>
-
-                    @if(session('status'))
-                    <div class="alert slert-success">
-                        {{ session('status')}}
-                    </div>
-                    @endif
                     <button class="btn btn-primary">Add Profile</button>
                 </form>
         </div>

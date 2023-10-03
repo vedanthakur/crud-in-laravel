@@ -1,9 +1,9 @@
 <?php
 
-use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get('/', function () {
@@ -18,10 +18,10 @@ Route::get('students/{student}/edit', [StudentController::class, 'edit'])->name(
 Route::put('students/{student}', [StudentController::class, 'update'])->name('students.update');
 Route::delete('students/{student}', [StudentController::class, 'destroy'])->name('students.destroy');
 
-Route::get('add_profile', function (){
-    return view('add_profile');
-});
-
-Route::get('profiles', function (){
-    return view('profiles');
-});
+Route::resource('profiles', ProfileController::class);
+Route::get('profiles', [ProfileController::class, 'index'])->name('profiles.index');
+Route::get('add_profile', [ProfileController::class, 'form']);
+Route::post('store-formP', [ProfileController::class, 'store'])->name('profiles.store');
+Route::get('profiles/{profile}/edit', [ProfileController::class, 'edit'])->name('edit_profile');
+Route::put('profiles/{profile}', [ProfileController::class, 'update'])->name('profiles.update');
+Route::delete('profiles/{profile}', [ProfileController::class, 'destroy'])->name('profiles.destroy');
