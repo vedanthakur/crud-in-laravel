@@ -25,7 +25,7 @@ Profile List
                 <p class="text-align-center font-size-16">Email: {{ $profile->email }}</p>
                 <p class="text-align-center font-size-16">Mobile: {{ $profile->mobile }}</p>
                 <p class="text-align-center font-size-16">Image:</p>
-                <img src="images/{{ $profile->image }}" width="200px" alt="{{ $profile->name }}">
+                <img src="images/{{ $profile->image }}" width="100px" alt="{{ $profile->name }}">
                 <p class="text-align-center font-size-16">Website: {{ $profile->website }}</p>
                 <p class="text-align-center font-size-16">Gender: {{ $profile->gender }}</p>
                 <p class="text-align-center font-size-16">Date of Birth: {{ $profile->dob }}</p>
@@ -42,6 +42,7 @@ Profile List
                 </div>
             </div>
         </div>
+    </div>
         @endforeach
         @else
         <h1 class="text-center">List is empty</h1>
