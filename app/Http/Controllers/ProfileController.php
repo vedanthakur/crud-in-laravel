@@ -47,11 +47,10 @@ class ProfileController extends Controller
         $profile->dob = $request->dob;
         $profile->save();
 
-        return redirect('add_profile')->with('status', 'Student added successfully!');
+        return redirect('add_profile')->with('status', 'Profile added successfully!');
     }
 
-
-
+    
     public function destroy(Profile $profile){
         $image_name = public_path('images').'/'.$profile->image;
 
