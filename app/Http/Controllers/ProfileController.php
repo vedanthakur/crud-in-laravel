@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Profile;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -52,7 +53,11 @@ class ProfileController extends Controller
 
 
     public function destroy(Profile $profile){
+        $image_name = public_path('images').'/'.$profile->image;
+
+        unlink($image_name);
         $profile->delete();
+
         return redirect()->route('profiles.index')->with('status', 'Profile deleted!');
     }
 

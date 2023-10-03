@@ -3,7 +3,7 @@
 @section('content')
   <div class="container">
     <div class="col-md-12">
-      <h1>Edit Student</h1>
+      <h1>Edit Profile</h1>
     </div>
     <div class="row">
       <div class="col-md-12">
@@ -27,7 +27,7 @@
 
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="number" class="form-control" name="email" value="{{ $profile->email }}">
+                <input type="email" class="form-control" name="email" value="{{ $profile->email }}">
                 @error('email')
                 <div class="alert alert-danger">
                     {{ $message }}
